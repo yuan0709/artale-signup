@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artale 副本報名系統</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>⚔️ Artale 隊伍報名</h2>
+    
+    <form id="signupForm">
+        <div class="form-group">
+            <label>遊戲 ID (Discord 名稱)</label>
+            <input type="text" id="playerId" placeholder="例如：茶菇#1234" required>
+        </div>
+
+        <div class="form-group">
+            <label>角色等級 (Level)</label>
+            <input type="number" id="level" min="1" max="200" value="120" required>
+            <div class="hint">※ 系統將依等級自動對應三/四轉職業</div>
+        </div>
+
+        <div class="form-group">
+            <label>職業角色</label>
+            <select id="job" required></select>
+        </div>
+
+        <div class="form-group">
+            <label>想打的王 (可複選)</label>
+            <div class="boss-group">
+                <label class="boss-item"><input type="checkbox" name="boss" value="普通拉圖斯"> 普通拉圖斯</label>
+                <label class="boss-item"><input type="checkbox" name="boss" value="殘暴炎魔"> 殘暴炎魔</label>
+                <label class="boss-item"><input type="checkbox" name="boss" value="困難拉圖斯"> 困難拉圖斯</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>可出團時段</label>
+            <div class="time-grid">
+                <div class="time-header">時段</div>
+                <div class="time-header">五</div>
+                <div class="time-header">六</div>
+                <div class="time-header">日</div>
+                
+                <div class="time-label">晚上(20-23)</div>
+                <div class="time-cell"><input type="checkbox" name="time" value="五晚"></div>
+                <div class="time-cell"><input type="checkbox" name="time" value="六晚"></div>
+                <div class="time-cell"><input type="checkbox" name="time" value="日晚"></div>
+                
+                <div class="time-label">半夜(23-02)</div>
+                <div class="time-cell"><input type="checkbox" name="time" value="五半夜"></div>
+                <div class="time-cell"><input type="checkbox" name="time" value="六半夜"></div>
+                <div class="time-cell"><input type="checkbox" name="time" value="日半夜"></div>
+            </div>
+            <input type="text" id="timeNote" class="note-input" placeholder="有具體時間需求請備註 (如: 21:00才在)">
+        </div>
+
+        <button type="submit">確認報名送出</button>
+    </form>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
