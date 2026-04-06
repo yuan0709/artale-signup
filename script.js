@@ -4,6 +4,12 @@ const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzCBEFU8rnPEu
 const levelInput = document.getElementById('level');
 const jobSelect = document.getElementById('job');
 
+// 當勾選副本時，才允許選擇場次
+function toggleCount(checkbox) {
+    const select = document.getElementsByName('count_' + checkbox.value)[0];
+    select.disabled = !checkbox.checked;
+}
+
 // 職業對照表 [三轉, 四轉]
 const jobPairs = [
     ["祭司", "主教"], ["火毒", "火毒"], ["冰雷", "冰雷"], 
@@ -99,8 +105,4 @@ document.getElementById('signupForm').addEventListener('submit', async function(
         alert("連線失敗，請檢查網路或網址是否正確。");
     }
 });
-// 當勾選副本時，才允許選擇場次
-function toggleCount(checkbox) {
-    const select = document.getElementsByName('count_' + checkbox.value)[0];
-    select.disabled = !checkbox.checked;
-}
+
