@@ -99,3 +99,8 @@ document.getElementById('signupForm').addEventListener('submit', async function(
         alert("連線失敗，請檢查網路或網址是否正確。");
     }
 });
+// 當勾選副本時，才允許選擇場次
+function toggleCount(checkbox) {
+    const select = document.getElementsByName('count_' + checkbox.value)[0];
+    select.disabled = !checkbox.checked;
+}
