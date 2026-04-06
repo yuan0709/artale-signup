@@ -29,13 +29,29 @@
         </div>
 
         <div class="form-group">
-            <label>想打的王 (可複選)</label>
-            <div class="boss-group">
-                <label class="boss-item"><input type="checkbox" name="boss" value="普通拉圖斯"> 普通拉圖斯</label>
-                <label class="boss-item"><input type="checkbox" name="boss" value="殘暴炎魔"> 殘暴炎魔</label>
-                <label class="boss-item"><input type="checkbox" name="boss" value="困難拉圖斯"> 困難拉圖斯</label>
-            </div>
-        </div>
+          <label>選擇副本與場次：</label>
+            <div>
+            <input type="checkbox" name="boss" value="普通拉圖斯"> 普通拉圖斯 
+            <select name="count_普通拉圖斯">
+              <option value="7">打 7 場</option>
+              <option value="14">打 14 場</option>
+            </select>
+          </div>
+          <div>
+            <input type="checkbox" name="boss" value="困難拉圖斯"> 困難拉圖斯 
+            <select name="count_困難拉圖斯">
+              <option value="7">打 7 場</option>
+              <option value="14">打 14 場</option>
+            </select>
+          </div>
+          <div>
+            <input type="checkbox" name="boss" value="殘暴炎魔"> 殘暴炎魔
+            <select name="count_殘暴炎魔">
+              <option value="7">打 7 場</option>
+              <option value="14">打 14 場</option>
+            </select>
+          </div>
+          </div>
 
         <div class="form-group">
             <label>可出團時段</label>
